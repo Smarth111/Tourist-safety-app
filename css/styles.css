@@ -1,0 +1,201 @@
+/* Global Styles */
+:root {
+    /* Light Theme Colors */
+    --light-primary: #1E3A8A; /* Navy Blue - trust, authority */
+    --light-secondary: #DC2626; /* Red - alerts/SOS */
+    --light-success: #16A34A; /* Green - resolved/safe */
+    --light-background: #FFFFFF; /* White background for clarity */
+    --light-surface: #F9FAFB; /* Light Grey for clarity */
+    --light-text: #374151;
+    --light-heading: #1E3A8A;
+    --light-border: #E5E7EB;
+    --light-card-bg: #FFFFFF;
+    
+    /* Dark Theme Colors */
+    --dark-primary: #3B82F6; /* Navy Blue - trust, authority */
+    --dark-secondary: #EF4444; /* Red - alerts/SOS */
+    --dark-success: #10B981; /* Green - resolved/safe */
+    --dark-background: #111827;
+    --dark-surface: #1F2937;
+    --dark-text: #E5E7EB;
+    --dark-heading: #F9FAFB;
+    --dark-border: #374151;
+    --dark-card-bg: #1F2937;
+    --dark-hover: #2a2a2a; /* Hover state background */
+    --dark-text-secondary: #a0a0a0; /* Secondary text */
+    --dark-accent: #2563EB; /* Accent color */
+    
+    /* Role-based Colors */
+    --police-color: #1E3A8A; /* Navy Blue for Police */
+    --medical-color: #DC2626; /* Red for Hospitals */
+    --tourism-color: #047857; /* Green for Tourism Officials */
+    --role-color: var(--dark-primary); /* Default role color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme Styles */
+body.dark-theme {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* User Avatar Styles */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-surface);
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .login-card {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+}
+
+.login-header {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: var(--dark-primary);
+    color: white;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.login-form {
+    padding: 30px 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.dark-theme .form-group input,
+.dark-theme .form-group select {
+    background-color: var(--dark-background);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text);
+}
+
+.dark-theme .form-group input:focus,
+.dark-theme .form-group select:focus {
+    border-color: var(--dark-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--dark-primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #2563EB; /* Slightly lighter blue */
+}
+
+.login-footer {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--dark-border);
+    color: var(--dark-text);
+    opacity: 0.7;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .login-card {
+        max-width: 100%;
+    }
+    
+    .login-header {
+        padding: 20px 15px;
+    }
+    
+    .login-form {
+        padding: 20px 15px;
+    }
+    
+    .logo img {
+        height: 60px;
+    }
+}

@@ -1,0 +1,439 @@
+/* Alert Handling Page Styles */
+
+/* Layout */
+.alert-handling-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 70px);
+    overflow: auto;
+}
+
+/* Tourist Profile Card */
+.tourist-profile-card {
+    grid-column: 1 / -1;
+    background-color: var(--dark-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--dark-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.profile-avatar .material-icons {
+    font-size: 36px;
+    color: white;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-heading);
+}
+
+.profile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.profile-meta-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--dark-text);
+    background-color: rgba(31, 41, 55, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.profile-meta-item .material-icons {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.profile-meta-item.alert-status {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: var(--dark-secondary);
+}
+
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px;
+}
+
+.detail-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.detail-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-heading);
+    display: flex;
+    align-items: center;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.detail-label {
+    font-weight: 500;
+    width: 150px;
+    color: rgba(229, 231, 235, 0.7);
+}
+
+.detail-value {
+    color: var(--dark-text);
+}
+
+/* Location and Actions Container */
+.location-actions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Location Map Card */
+.location-map-card {
+    background-color: var(--dark-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.card-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-heading);
+    display: flex;
+    align-items: center;
+}
+
+.card-header h3 .material-icons {
+    margin-right: 8px;
+    color: var(--dark-primary);
+}
+
+.location-time {
+    font-size: 12px;
+    color: rgba(229, 231, 235, 0.7);
+}
+
+.alert-map {
+    height: 250px;
+    background-color: #1a1d29; /* Darker background for map */
+}
+
+.location-details {
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+.location-address, .location-coordinates {
+    margin-bottom: 8px;
+}
+
+/* Action Buttons Card */
+.action-buttons-card {
+    background-color: var(--dark-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.action-btn .material-icons {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.police-btn {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: var(--dark-primary);
+}
+
+.police-btn:hover {
+    background-color: rgba(59, 130, 246, 0.25);
+}
+
+.hospital-btn {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--dark-success);
+}
+
+.hospital-btn:hover {
+    background-color: rgba(16, 185, 129, 0.25);
+}
+
+.call-btn {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #F59E0B; /* Amber */
+}
+
+.call-btn:hover {
+    background-color: rgba(245, 158, 11, 0.25);
+}
+
+.message-btn {
+    background-color: rgba(124, 58, 237, 0.15);
+    color: #7C3AED; /* Purple */
+}
+
+.message-btn:hover {
+    background-color: rgba(124, 58, 237, 0.25);
+}
+
+.resolve-btn {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--dark-success);
+}
+
+.resolve-btn:hover {
+    background-color: rgba(16, 185, 129, 0.25);
+}
+
+/* Chat Panel */
+.chat-panel {
+    background-color: var(--dark-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-item {
+    display: flex;
+    max-width: 85%;
+}
+
+.message-item.police {
+    align-self: flex-start;
+}
+
+.message-item.hospital {
+    align-self: flex-start;
+}
+
+.message-item.tourism {
+    align-self: flex-start;
+}
+
+.message-item.system {
+    align-self: center;
+    max-width: 70%;
+}
+
+.message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.message-item.police .message-avatar {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: var(--dark-primary);
+}
+
+.message-item.hospital .message-avatar {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: var(--dark-success);
+}
+
+.message-item.tourism .message-avatar {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #F59E0B; /* Amber */
+}
+
+.message-content {
+    background-color: rgba(31, 41, 55, 0.5);
+    border-radius: 8px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.message-item.police .message-content {
+    border-left: 3px solid var(--dark-primary);
+}
+
+.message-item.hospital .message-content {
+    border-left: 3px solid var(--dark-success);
+}
+
+.message-item.tourism .message-content {
+    border-left: 3px solid #F59E0B; /* Amber */
+}
+
+.message-item.system .message-content {
+    background-color: rgba(31, 41, 55, 0.3);
+    border: 1px solid var(--dark-border);
+    text-align: center;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.message-sender {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--dark-heading);
+}
+
+.message-time {
+    font-size: 12px;
+    color: rgba(229, 231, 235, 0.7);
+}
+
+.message-text {
+    font-size: 14px;
+    color: var(--dark-text);
+    line-height: 1.4;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px 20px;
+    border-top: 1px solid var(--dark-border);
+}
+
+.message-input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--dark-border);
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+    font-size: 14px;
+}
+
+.message-input:focus {
+    outline: none;
+    border-color: var(--dark-primary);
+}
+
+.send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--dark-primary);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #2563EB; /* Slightly lighter blue */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .alert-handling-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-actions-container {
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .profile-meta {
+        justify-content: center;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}

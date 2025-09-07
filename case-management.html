@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Management - Tourist Mitra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/case-management.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="material-icons">security</span>
+                </div>
+                <h2>Tourist Safety</h2>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="material-icons">dashboard</span>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="alerts.html">
+                            <span class="material-icons">notifications</span>
+                            <span class="nav-text">Alert Handling</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tourist-info.html">
+                            <span class="material-icons">person</span>
+                            <span class="nav-text">Tourist Info</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="case-management.html">
+                            <span class="material-icons">folder</span>
+                            <span class="nav-text">Case Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <span class="material-icons">bar_chart</span>
+                            <span class="nav-text">Reports & Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="communication.html">
+                            <span class="material-icons">chat</span>
+                            <span class="nav-text">Communication</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html">
+                    <span class="material-icons">logout</span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <button class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="page-title">
+                    <h1>Case Management</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <span class="material-icons">search</span>
+                        <input type="text" placeholder="Search cases by ID, tourist name...">
+                    </div>
+                    <div class="user-profile">
+                        <div class="profile-pic">
+                            <span class="material-icons">account_circle</span>
+                        </div>
+                        <div class="user-info">
+                            <p class="user-name">Officer Johnson</p>
+                            <p class="user-role">Police Department</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Case Management Tabs -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="active-cases">Active Cases</button>
+                    <button class="tab-btn" data-tab="new-case">New Case / E-FIR</button>
+                    <button class="tab-btn" data-tab="resolved-cases">Resolved Cases</button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Active Cases Tab -->
+                    <div class="tab-pane active" id="active-cases">
+                        <div class="cases-list">
+                            <!-- Case Item -->
+                            <div class="case-item high-priority">
+                                <div class="case-header">
+                                    <div class="case-id">#TSA-2023-0142</div>
+                                    <div class="case-priority">High Priority</div>
+                                </div>
+                                <div class="case-body">
+                                    <h3 class="case-title">Robbery at Central Park</h3>
+                                    <div class="case-meta">
+                                        <div class="meta-item">
+                                            <span class="material-icons">person</span>
+                                            <span>John Doe (Tourist)</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">calendar_today</span>
+                                            <span>Reported: Oct 15, 2023</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">location_on</span>
+                                            <span>Central Park, East Drive</span>
+                                        </div>
+                                    </div>
+                                    <p class="case-description">Tourist reported being robbed at knifepoint while jogging in Central Park. Passport, wallet, and phone were stolen.</p>
+                                </div>
+                                <div class="case-footer">
+                                    <div class="case-status">
+                                        <span class="status-badge in-progress">In Progress</span>
+                                        <span class="assigned-to">Assigned to: Det. Rodriguez</span>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="action-btn view-btn" data-id="TSA-2023-0142">
+                                            <span class="material-icons">visibility</span>
+                                            View
+                                        </button>
+                                        <button class="action-btn update-btn" data-id="TSA-2023-0142">
+                                            <span class="material-icons">edit</span>
+                                            Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Case Item -->
+                            <div class="case-item medium-priority">
+                                <div class="case-header">
+                                    <div class="case-id">#TSA-2023-0138</div>
+                                    <div class="case-priority">Medium Priority</div>
+                                </div>
+                                <div class="case-body">
+                                    <h3 class="case-title">Lost Passport at Times Square</h3>
+                                    <div class="case-meta">
+                                        <div class="meta-item">
+                                            <span class="material-icons">person</span>
+                                            <span>Maria Perez (Tourist)</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">calendar_today</span>
+                                            <span>Reported: Oct 14, 2023</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">location_on</span>
+                                            <span>Times Square, Broadway</span>
+                                        </div>
+                                    </div>
+                                    <p class="case-description">Tourist reported losing passport while sightseeing at Times Square. Last seen in a small black purse.</p>
+                                </div>
+                                <div class="case-footer">
+                                    <div class="case-status">
+                                        <span class="status-badge in-progress">In Progress</span>
+                                        <span class="assigned-to">Assigned to: Off. Chen</span>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="action-btn view-btn" data-id="TSA-2023-0138">
+                                            <span class="material-icons">visibility</span>
+                                            View
+                                        </button>
+                                        <button class="action-btn update-btn" data-id="TSA-2023-0138">
+                                            <span class="material-icons">edit</span>
+                                            Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Case Item -->
+                            <div class="case-item low-priority">
+                                <div class="case-header">
+                                    <div class="case-id">#TSA-2023-0135</div>
+                                    <div class="case-priority">Low Priority</div>
+                                </div>
+                                <div class="case-body">
+                                    <h3 class="case-title">Taxi Fare Dispute</h3>
+                                    <div class="case-meta">
+                                        <div class="meta-item">
+                                            <span class="material-icons">person</span>
+                                            <span>Robert Kim (Tourist)</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">calendar_today</span>
+                                            <span>Reported: Oct 13, 2023</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">location_on</span>
+                                            <span>JFK Airport, Terminal 4</span>
+                                        </div>
+                                    </div>
+                                    <p class="case-description">Tourist reported being overcharged by taxi driver from JFK to Manhattan hotel. Receipt shows $120 for a standard fare route.</p>
+                                </div>
+                                <div class="case-footer">
+                                    <div class="case-status">
+                                        <span class="status-badge pending">Pending Review</span>
+                                        <span class="assigned-to">Assigned to: Off. Williams</span>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="action-btn view-btn" data-id="TSA-2023-0135">
+                                            <span class="material-icons">visibility</span>
+                                            View
+                                        </button>
+                                        <button class="action-btn update-btn" data-id="TSA-2023-0135">
+                                            <span class="material-icons">edit</span>
+                                            Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Case / E-FIR Tab -->
+                    <div class="tab-pane" id="new-case">
+                        <div class="case-form-container">
+                            <h2>Create New Case / E-FIR</h2>
+                            <form class="case-form">
+                                <!-- Case Type and Priority -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="case-type">Case Type</label>
+                                        <select id="case-type" required>
+                                            <option value="">Select Case Type</option>
+                                            <option value="theft">Theft/Robbery</option>
+                                            <option value="lost">Lost Item/Document</option>
+                                            <option value="assault">Assault</option>
+                                            <option value="harassment">Harassment</option>
+                                            <option value="fraud">Fraud/Scam</option>
+                                            <option value="medical">Medical Emergency</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="case-priority">Priority</label>
+                                        <select id="case-priority" required>
+                                            <option value="">Select Priority</option>
+                                            <option value="high">High</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="low">Low</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <!-- Case Title and Date -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="case-title">Case Title</label>
+                                        <input type="text" id="case-title" placeholder="Brief title describing the incident" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="incident-date">Incident Date & Time</label>
+                                        <input type="datetime-local" id="incident-date" required>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tourist Information -->
+                                <div class="form-section">
+                                    <h3>Tourist Information</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="tourist-name">Full Name</label>
+                                            <input type="text" id="tourist-name" placeholder="Tourist's full name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tourist-id">Passport/ID Number</label>
+                                            <input type="text" id="tourist-id" placeholder="Passport or ID number">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="tourist-nationality">Nationality</label>
+                                            <input type="text" id="tourist-nationality" placeholder="Tourist's nationality">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tourist-contact">Contact Number</label>
+                                            <input type="tel" id="tourist-contact" placeholder="Tourist's contact number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tourist-email">Email Address</label>
+                                        <input type="email" id="tourist-email" placeholder="Tourist's email address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tourist-accommodation">Accommodation Details</label>
+                                        <input type="text" id="tourist-accommodation" placeholder="Hotel name, address, room number, etc.">
+                                    </div>
+                                </div>
+                                
+                                <!-- Incident Details -->
+                                <div class="form-section">
+                                    <h3>Incident Details</h3>
+                                    <div class="form-group">
+                                        <label for="incident-location">Location</label>
+                                        <input type="text" id="incident-location" placeholder="Where did the incident occur?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="incident-description">Description</label>
+                                        <textarea id="incident-description" rows="5" placeholder="Detailed description of what happened" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Items Involved (if applicable)</label>
+                                        <div class="items-container">
+                                            <div class="item-row">
+                                                <input type="text" placeholder="Item description" class="item-description">
+                                                <input type="text" placeholder="Value/Amount" class="item-value">
+                                                <button type="button" class="add-item-btn">
+                                                    <span class="material-icons">add</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Witnesses -->
+                                <div class="form-section">
+                                    <h3>Witnesses (if any)</h3>
+                                    <div class="witnesses-container">
+                                        <div class="witness-row">
+                                            <input type="text" placeholder="Witness name" class="witness-name">
+                                            <input type="text" placeholder="Contact information" class="witness-contact">
+                                            <button type="button" class="add-witness-btn">
+                                                <span class="material-icons">add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Evidence Upload -->
+                                <div class="form-section">
+                                    <h3>Evidence & Attachments</h3>
+                                    <div class="form-group">
+                                        <label for="evidence-upload">Upload Files (Photos, Videos, Documents)</label>
+                                        <div class="file-upload-container">
+                                            <input type="file" id="evidence-upload" multiple>
+                                            <label for="evidence-upload" class="file-upload-label">
+                                                <span class="material-icons">cloud_upload</span>
+                                                <span>Drag files here or click to upload</span>
+                                            </label>
+                                        </div>
+                                        <div class="uploaded-files"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Case Assignment -->
+                                <div class="form-section">
+                                    <h3>Case Assignment</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="assigned-to">Assign To</label>
+                                            <select id="assigned-to">
+                                                <option value="">Select Officer/Department</option>
+                                                <option value="rodriguez">Det. Rodriguez</option>
+                                                <option value="chen">Off. Chen</option>
+                                                <option value="williams">Off. Williams</option>
+                                                <option value="tourism">Tourism Department</option>
+                                                <option value="hospital">Medical Response Team</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="case-status">Initial Status</label>
+                                            <select id="case-status">
+                                                <option value="pending">Pending Review</option>
+                                                <option value="in-progress">In Progress</option>
+                                                <option value="under-investigation">Under Investigation</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Form Actions -->
+                                <div class="form-actions">
+                                    <button type="button" class="secondary-btn">Save as Draft</button>
+                                    <button type="submit" class="primary-btn">Submit Case</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Resolved Cases Tab -->
+                    <div class="tab-pane" id="resolved-cases">
+                        <div class="cases-list">
+                            <!-- Resolved Case Item -->
+                            <div class="case-item resolved">
+                                <div class="case-header">
+                                    <div class="case-id">#TSA-2023-0125</div>
+                                    <div class="case-resolution-date">Resolved: Oct 12, 2023</div>
+                                </div>
+                                <div class="case-body">
+                                    <h3 class="case-title">Lost Camera at Empire State Building</h3>
+                                    <div class="case-meta">
+                                        <div class="meta-item">
+                                            <span class="material-icons">person</span>
+                                            <span>Akira Tanaka (Tourist)</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">calendar_today</span>
+                                            <span>Reported: Oct 10, 2023</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">location_on</span>
+                                            <span>Empire State Building, Observation Deck</span>
+                                        </div>
+                                    </div>
+                                    <p class="case-description">Tourist reported losing a Canon EOS R5 camera at the observation deck. Camera was found by security and returned to the tourist.</p>
+                                </div>
+                                <div class="case-footer">
+                                    <div class="case-status">
+                                        <span class="status-badge resolved">Resolved</span>
+                                        <span class="resolution-note">Item recovered and returned</span>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="action-btn view-btn" data-id="TSA-2023-0125">
+                                            <span class="material-icons">visibility</span>
+                                            View
+                                        </button>
+                                        <button class="action-btn report-btn" data-id="TSA-2023-0125">
+                                            <span class="material-icons">description</span>
+                                            Report
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Resolved Case Item -->
+                            <div class="case-item resolved">
+                                <div class="case-header">
+                                    <div class="case-id">#TSA-2023-0118</div>
+                                    <div class="case-resolution-date">Resolved: Oct 9, 2023</div>
+                                </div>
+                                <div class="case-body">
+                                    <h3 class="case-title">Credit Card Fraud at Souvenir Shop</h3>
+                                    <div class="case-meta">
+                                        <div class="meta-item">
+                                            <span class="material-icons">person</span>
+                                            <span>Jane Smith (Tourist)</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">calendar_today</span>
+                                            <span>Reported: Oct 8, 2023</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="material-icons">location_on</span>
+                                            <span>5th Avenue Souvenir Shop</span>
+                                        </div>
+                                    </div>
+                                    <p class="case-description">Tourist reported unauthorized charges on credit card after shopping at souvenir store. Investigation confirmed skimming device at the store.</p>
+                                </div>
+                                <div class="case-footer">
+                                    <div class="case-status">
+                                        <span class="status-badge resolved">Resolved</span>
+                                        <span class="resolution-note">Suspect arrested, charges filed</span>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="action-btn view-btn" data-id="TSA-2023-0118">
+                                            <span class="material-icons">visibility</span>
+                                            View
+                                        </button>
+                                        <button class="action-btn report-btn" data-id="TSA-2023-0118">
+                                            <span class="material-icons">description</span>
+                                            Report
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Detail Modal -->
+            <div class="modal" id="case-detail-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Case Details</h2>
+                        <button class="close-modal">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="case-detail">
+                            <div class="case-detail-header">
+                                <div>
+                                    <h3 class="case-title">Robbery at Central Park</h3>
+                                    <div class="case-id">#TSA-2023-0142</div>
+                                </div>
+                                <div class="case-status">
+                                    <span class="status-badge in-progress">In Progress</span>
+                                </div>
+                            </div>
+                            
+                            <div class="case-detail-sections">
+                                <!-- Case Information -->
+                                <div class="detail-section">
+                                    <h4>Case Information</h4>
+                                    <div class="detail-grid">
+                                        <div class="detail-item">
+                                            <span class="detail-label">Case Type</span>
+                                            <span class="detail-value">Theft/Robbery</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Priority</span>
+                                            <span class="detail-value high-priority">High</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Reported Date</span>
+                                            <span class="detail-value">Oct 15, 2023 - 3:45 PM</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Incident Date</span>
+                                            <span class="detail-value">Oct 15, 2023 - 2:30 PM</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Location</span>
+                                            <span class="detail-value">Central Park, East Drive near 72nd St</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Assigned To</span>
+                                            <span class="detail-value">Det. Rodriguez (Badge #4872)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tourist Information -->
+                                <div class="detail-section">
+                                    <h4>Tourist Information</h4>
+                                    <div class="detail-grid">
+                                        <div class="detail-item">
+                                            <span class="detail-label">Name</span>
+                                            <span class="detail-value">John Michael Doe</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Passport/ID</span>
+                                            <span class="detail-value">P12345678 (United States)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Contact</span>
+                                            <span class="detail-value">+1 (555) 123-4567</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Email</span>
+                                            <span class="detail-value">john.doe@example.com</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Accommodation</span>
+                                            <span class="detail-value">Grand Plaza Hotel, Room 512</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Check-out Date</span>
+                                            <span class="detail-value">Oct 22, 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Incident Description -->
+                                <div class="detail-section">
+                                    <h4>Incident Description</h4>
+                                    <div class="description-box">
+                                        <p>Tourist reported being approached by two males while jogging on East Drive in Central Park at approximately 2:30 PM. One suspect displayed a knife and demanded valuables. The tourist complied, and the suspects fled south on foot.</p>
+                                        <p>No physical injuries were reported, but the tourist was visibly shaken. The incident was reported via SOS alert from the tourist's smartwatch, which was not taken during the robbery.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Items Involved -->
+                                <div class="detail-section">
+                                    <h4>Items Involved</h4>
+                                    <table class="items-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Item Description</th>
+                                                <th>Estimated Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>US Passport</td>
+                                                <td>N/A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>iPhone 14 Pro (Black)</td>
+                                                <td>$999</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Leather wallet (Brown)</td>
+                                                <td>$75</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cash (USD)</td>
+                                                <td>$240</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Credit Cards (2)</td>
+                                                <td>N/A</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- Suspect Description -->
+                                <div class="detail-section">
+                                    <h4>Suspect Description</h4>
+                                    <div class="description-box">
+                                        <p><strong>Suspect 1:</strong> Male, approximately 20-25 years old, 5'10", medium build, wearing a black hoodie, dark jeans, and white sneakers. Armed with a knife.</p>
+                                        <p><strong>Suspect 2:</strong> Male, approximately 20-25 years old, 5'8", slim build, wearing a gray sweatshirt, black pants, and black cap.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Case Timeline -->
+                                <div class="detail-section">
+                                    <h4>Case Timeline</h4>
+                                    <div class="case-timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-point"></div>
+                                            <div class="timeline-content">
+                                                <div class="timeline-header">
+                                                    <span class="timeline-time">Oct 15, 2023 - 3:45 PM</span>
+                                                    <span class="timeline-type">Case Created</span>
+                                                </div>
+                                                <p>Case created based on SOS alert. Initial report taken from tourist.</p>
+                                                <span class="timeline-user">By: Off. Johnson</span>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-point"></div>
+                                            <div class="timeline-content">
+                                                <div class="timeline-header">
+                                                    <span class="timeline-time">Oct 15, 2023 - 4:30 PM</span>
+                                                    <span class="timeline-type">Case Assigned</span>
+                                                </div>
+                                                <p>Case assigned to Detective Rodriguez for investigation.</p>
+                                                <span class="timeline-user">By: Sgt. Martinez</span>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-point"></div>
+                                            <div class="timeline-content">
+                                                <div class="timeline-header">
+                                                    <span class="timeline-time">Oct 15, 2023 - 5:15 PM</span>
+                                                    <span class="timeline-type">Update</span>
+                                                </div>
+                                                <p>Visited crime scene. Collected CCTV footage from nearby cameras. Two potential witnesses identified.</p>
+                                                <span class="timeline-user">By: Det. Rodriguez</span>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-point"></div>
+                                            <div class="timeline-content">
+                                                <div class="timeline-header">
+                                                    <span class="timeline-time">Oct 15, 2023 - 7:30 PM</span>
+                                                    <span class="timeline-type">Update</span>
+                                                </div>
+                                                <p>Emergency passport application process initiated with US Consulate. Credit cards reported stolen and canceled.</p>
+                                                <span class="timeline-user">By: Tourism Dept. (Sarah Wilson)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Evidence & Attachments -->
+                                <div class="detail-section">
+                                    <h4>Evidence & Attachments</h4>
+                                    <div class="attachments-container">
+                                        <div class="attachment-item">
+                                            <div class="attachment-icon">
+                                                <span class="material-icons">image</span>
+                                            </div>
+                                            <div class="attachment-info">
+                                                <span class="attachment-name">Crime_Scene_Photo_1.jpg</span>
+                                                <span class="attachment-meta">Image • 2.4 MB • Added Oct 15</span>
+                                            </div>
+                                            <button class="attachment-action">
+                                                <span class="material-icons">visibility</span>
+                                            </button>
+                                        </div>
+                                        <div class="attachment-item">
+                                            <div class="attachment-icon">
+                                                <span class="material-icons">videocam</span>
+                                            </div>
+                                            <div class="attachment-info">
+                                                <span class="attachment-name">CCTV_Footage.mp4</span>
+                                                <span class="attachment-meta">Video • 18.7 MB • Added Oct 15</span>
+                                            </div>
+                                            <button class="attachment-action">
+                                                <span class="material-icons">visibility</span>
+                                            </button>
+                                        </div>
+                                        <div class="attachment-item">
+                                            <div class="attachment-icon">
+                                                <span class="material-icons">description</span>
+                                            </div>
+                                            <div class="attachment-info">
+                                                <span class="attachment-name">Witness_Statement_1.pdf</span>
+                                                <span class="attachment-meta">Document • 1.2 MB • Added Oct 15</span>
+                                            </div>
+                                            <button class="attachment-action">
+                                                <span class="material-icons">visibility</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="modal-btn secondary-btn">Close</button>
+                        <button class="modal-btn update-btn">
+                            <span class="material-icons">edit</span>
+                            Update Case
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/case-management.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Pin Shape -->
+  <path d="M24 4 C 14 4, 6 12, 6 22 C 6 32, 24 44, 24 44 C 24 44, 42 32, 42 22 C 42 12, 34 4, 24 4 Z" fill="#EF4444" />
+  
+  <!-- Theft Icon -->
+  <path d="M20 14 L 28 14 L 28 18 L 30 18 L 30 22 L 28 22 L 28 32 L 20 32 L 20 22 L 18 22 L 18 18 L 20 18 Z" fill="#FFFFFF" />
+</svg>

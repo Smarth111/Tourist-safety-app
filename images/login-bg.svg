@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Abstract Pattern -->
+  <g opacity="0.1" fill="#FFFFFF">
+    <!-- Circles -->
+    <circle cx="100" cy="100" r="50" />
+    <circle cx="700" cy="500" r="80" />
+    <circle cx="200" cy="400" r="40" />
+    <circle cx="600" cy="200" r="60" />
+    
+    <!-- Lines -->
+    <path d="M0 300 L 800 300" stroke="#FFFFFF" stroke-width="2" />
+    <path d="M400 0 L 400 600" stroke="#FFFFFF" stroke-width="2" />
+    
+    <!-- Tourism Icons -->
+    <path d="M300 150 L 350 150 L 325 100 Z" /> <!-- Mountain -->
+    <rect x="500" y="350" width="30" height="50" /> <!-- Building -->
+    <circle cx="500" cy="330" r="20" /> <!-- Sun -->
+    <path d="M600 450 C 620 430, 640 470, 660 450" stroke="#FFFFFF" stroke-width="3" fill="none" /> <!-- Wave -->
+  </g>
+</svg>

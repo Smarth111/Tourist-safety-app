@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Pin Shape -->
+  <path d="M24 4 C 14 4, 6 12, 6 22 C 6 32, 24 44, 24 44 C 24 44, 42 32, 42 22 C 42 12, 34 4, 24 4 Z" fill="#6B7280" />
+  
+  <!-- Question Mark Icon -->
+  <path d="M24 34 C 25.5 34, 27 32.5, 27 31 C 27 29.5, 25.5 28, 24 28 C 22.5 28, 21 29.5, 21 31 C 21 32.5, 22.5 34, 24 34 Z" fill="#FFFFFF" />
+  <path d="M24 14 C 20 14, 17 17, 17 21 L 21 21 C 21 19, 22 18, 24 18 C 26 18, 27 19, 27 21 C 27 23, 24 22.5, 24 26" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" />
+</svg>

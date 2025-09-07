@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics - Tourist Safety Authority</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/reports.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Tourist Safety Authority Logo">
+                </div>
+                <h2>Tourist Safety</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="material-icons">dashboard</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="alerts.html">
+                            <span class="material-icons">notifications</span>
+                            <span>Alerts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tourist-info.html">
+                            <span class="material-icons">people</span>
+                            <span>Tourists</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="case-management.html">
+                            <span class="material-icons">folder</span>
+                            <span>Cases</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="reports.html">
+                            <span class="material-icons">bar_chart</span>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="communication.html">
+                            <span class="material-icons">chat</span>
+                            <span>Communication</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="settings-link">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <a href="index.html" class="logout-link">
+                    <span class="material-icons">logout</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <button class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1>Reports & Analytics</h1>
+                <div class="header-actions">
+                    <div class="date-filter">
+                        <label for="date-range">Date Range:</label>
+                        <select id="date-range">
+                            <option value="7">Last 7 Days</option>
+                            <option value="30" selected>Last 30 Days</option>
+                            <option value="90">Last 90 Days</option>
+                            <option value="365">Last Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <button class="export-btn">
+                        <span class="material-icons">download</span>
+                        Export Report
+                    </button>
+                </div>
+            </header>
+
+            <!-- Reports Content -->
+            <div class="reports-container">
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <span class="material-icons">warning</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Alerts</h3>
+                            <p class="card-value">247</p>
+                            <p class="card-trend positive">+12% <span class="material-icons">trending_up</span></p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <span class="material-icons">check_circle</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Resolved Cases</h3>
+                            <p class="card-value">189</p>
+                            <p class="card-trend positive">+8% <span class="material-icons">trending_up</span></p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <span class="material-icons">schedule</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Avg. Response Time</h3>
+                            <p class="card-value">14.2 min</p>
+                            <p class="card-trend negative">-5% <span class="material-icons">trending_down</span></p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <span class="material-icons">people</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Registered Tourists</h3>
+                            <p class="card-value">1,842</p>
+                            <p class="card-trend positive">+23% <span class="material-icons">trending_up</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Sections -->
+                <div class="chart-row">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h2>Incident Types</h2>
+                            <div class="chart-actions">
+                                <button class="chart-action-btn active" data-view="pie">Pie</button>
+                                <button class="chart-action-btn" data-view="bar">Bar</button>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="incident-types-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h2>Alerts by Location</h2>
+                            <div class="chart-actions">
+                                <button class="chart-action-btn active" data-view="bar">Bar</button>
+                                <button class="chart-action-btn" data-view="line">Line</button>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="location-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <div class="chart-container full-width">
+                        <div class="chart-header">
+                            <h2>Alerts Trend Over Time</h2>
+                            <div class="chart-actions">
+                                <button class="chart-action-btn active" data-period="daily">Daily</button>
+                                <button class="chart-action-btn" data-period="weekly">Weekly</button>
+                                <button class="chart-action-btn" data-period="monthly">Monthly</button>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="trend-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="metrics-section">
+                    <h2>Response Performance Metrics</h2>
+                    <div class="metrics-table-container">
+                        <table class="metrics-table">
+                            <thead>
+                                <tr>
+                                    <th>Department</th>
+                                    <th>Avg. Response Time</th>
+                                    <th>Cases Handled</th>
+                                    <th>Resolution Rate</th>
+                                    <th>Satisfaction Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Police Department</td>
+                                    <td>12.5 min</td>
+                                    <td>98</td>
+                                    <td>94%</td>
+                                    <td>
+                                        <div class="rating">
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons">star_half</span>
+                                            <span>4.5</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Hospital Services</td>
+                                    <td>8.2 min</td>
+                                    <td>73</td>
+                                    <td>98%</td>
+                                    <td>
+                                        <div class="rating">
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span>4.9</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tourism Department</td>
+                                    <td>15.8 min</td>
+                                    <td>76</td>
+                                    <td>89%</td>
+                                    <td>
+                                        <div class="rating">
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons filled">star</span>
+                                            <span class="material-icons">star</span>
+                                            <span>4.0</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/reports.js"></script>
+</body>
+</html>

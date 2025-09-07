@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Pin Shape -->
+  <path d="M24 4 C 14 4, 6 12, 6 22 C 6 32, 24 44, 24 44 C 24 44, 42 32, 42 22 C 42 12, 34 4, 24 4 Z" fill="#10B981" />
+  
+  <!-- Medical Cross Icon -->
+  <path d="M18 16 L 30 16 L 30 22 L 36 22 L 36 30 L 30 30 L 30 36 L 18 36 L 18 30 L 12 30 L 12 22 L 18 22 Z" fill="#FFFFFF" />
+</svg>

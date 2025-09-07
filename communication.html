@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Panel - Tourist Safety Authority</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/communication.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Tourist Safety Authority Logo">
+                </div>
+                <h2>Tourist Safety</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="material-icons">dashboard</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="alerts.html">
+                            <span class="material-icons">notifications</span>
+                            <span>Alerts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tourist-info.html">
+                            <span class="material-icons">people</span>
+                            <span>Tourists</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="case-management.html">
+                            <span class="material-icons">folder</span>
+                            <span>Cases</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <span class="material-icons">bar_chart</span>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="communication.html">
+                            <span class="material-icons">chat</span>
+                            <span>Communication</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="settings-link">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <a href="index.html" class="logout-link">
+                    <span class="material-icons">logout</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <button class="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1>Communication Panel</h1>
+                <div class="header-actions">
+                    <div class="user-info">
+                        <span class="user-role">Police Officer</span>
+                        <span class="user-name">John Doe</span>
+                        <div class="user-avatar">
+                            <span class="material-icons">account_circle</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Communication Content -->
+            <div class="communication-container">
+                <!-- Contacts Sidebar -->
+                <div class="contacts-sidebar">
+                    <div class="contacts-header">
+                        <h2>Contacts</h2>
+                        <div class="contacts-search">
+                            <input type="text" placeholder="Search contacts..." id="contact-search">
+                            <span class="material-icons">search</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-tabs">
+                        <button class="tab-btn active" data-tab="departments">Departments</button>
+                        <button class="tab-btn" data-tab="teams">Teams</button>
+                        <button class="tab-btn" data-tab="direct">Direct</button>
+                    </div>
+                    
+                    <div class="contacts-list-container">
+                        <div class="contacts-list active" id="departments">
+                            <div class="contact-item active">
+                                <div class="contact-avatar department">
+                                    <span class="material-icons">local_police</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Police Department</h3>
+                                    <p>General communication channel</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-badge">5</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar department">
+                                    <span class="material-icons">local_hospital</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Hospital Services</h3>
+                                    <p>Medical emergencies and support</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar department">
+                                    <span class="material-icons">tour</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Tourism Department</h3>
+                                    <p>Tourism information and assistance</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-badge">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contacts-list" id="teams">
+                            <div class="contact-item">
+                                <div class="contact-avatar team">
+                                    <span class="material-icons">groups</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Emergency Response</h3>
+                                    <p>Rapid response coordination</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-badge">3</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar team">
+                                    <span class="material-icons">groups</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Beach Patrol</h3>
+                                    <p>Coastal area security team</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar team">
+                                    <span class="material-icons">groups</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Tourist Guides</h3>
+                                    <p>Official guides and translators</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contacts-list" id="direct">
+                            <div class="contact-item">
+                                <div class="contact-avatar">
+                                    <span class="material-icons">account_circle</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Sarah Johnson</h3>
+                                    <p>Hospital Services</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar">
+                                    <span class="material-icons">account_circle</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Michael Chen</h3>
+                                    <p>Tourism Department</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-indicator online"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar">
+                                    <span class="material-icons">account_circle</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Robert Garcia</h3>
+                                    <p>Police Department</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-indicator away"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar">
+                                    <span class="material-icons">account_circle</span>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Emily Wilson</h3>
+                                    <p>Emergency Response</p>
+                                </div>
+                                <div class="contact-status">
+                                    <span class="status-indicator offline"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat Area -->
+                <div class="chat-area">
+                    <div class="chat-header">
+                        <div class="chat-contact-info">
+                            <div class="contact-avatar department">
+                                <span class="material-icons">local_police</span>
+                            </div>
+                            <div>
+                                <h2>Police Department</h2>
+                                <p>15 members, 8 online</p>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="action-btn">
+                                <span class="material-icons">phone</span>
+                            </button>
+                            <button class="action-btn">
+                                <span class="material-icons">videocam</span>
+                            </button>
+                            <button class="action-btn">
+                                <span class="material-icons">more_vert</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message-date-divider">
+                            <span>Today</span>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-sender">Robert Garcia</span>
+                                    <span class="message-time">09:15 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>Good morning team. We have a new alert from a tourist in the Beach Area. Tourist ID: T-2458.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-sender">Lisa Wong</span>
+                                    <span class="message-time">09:18 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>I'm checking the details now. What's the nature of the alert?</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-sender">Robert Garcia</span>
+                                    <span class="message-time">09:20 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>Reported theft of personal belongings. Passport and wallet stolen while at the beach.</p>
+                                </div>
+                                <div class="message-attachment">
+                                    <div class="attachment-preview">
+                                        <span class="material-icons">description</span>
+                                        <span class="attachment-name">Alert_Report_T2458.pdf</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message sent">
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-time">09:25 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>I'll dispatch a unit to the location. Can someone from Tourism Department assist with temporary documentation?</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-sender">System</span>
+                                    <span class="message-time">09:26 AM</span>
+                                </div>
+                                <div class="message-text system-message">
+                                    <p>Alert T-2458 has been assigned to Officer John Doe. Tourism Department has been notified.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-sender">David Kim</span>
+                                    <span class="message-time">09:30 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>I've reviewed the security camera footage from the area. Sending the relevant clips now.</p>
+                                </div>
+                                <div class="message-attachment">
+                                    <div class="attachment-preview video">
+                                        <span class="material-icons">videocam</span>
+                                        <span class="attachment-name">Beach_Cam_4_09AM.mp4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message sent">
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-time">09:35 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>Thanks David. I'll check the footage and update the case file. Let's coordinate with the beach patrol team as well.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-date-divider">
+                            <span>New Messages</span>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <span class="material-icons">account_circle</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-info">
+                                    <span class="message-sender">Robert Garcia</span>
+                                    <span class="message-time">10:05 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    <p>Update: We've identified a suspect from the camera footage. Sending the details to all units in the area.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <button class="attachment-btn">
+                            <span class="material-icons">attach_file</span>
+                        </button>
+                        <input type="text" placeholder="Type a message..." id="message-input">
+                        <button class="emoji-btn">
+                            <span class="material-icons">sentiment_satisfied_alt</span>
+                        </button>
+                        <button class="send-btn" id="send-message-btn">
+                            <span class="material-icons">send</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Info Panel -->
+                <div class="info-panel">
+                    <div class="info-header">
+                        <h2>Channel Information</h2>
+                        <button class="close-info-panel">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+                    
+                    <div class="info-content">
+                        <div class="info-section">
+                            <h3>About</h3>
+                            <p>Official communication channel for the Police Department. Use this channel for case coordination, alerts, and general communication.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h3>Members (15)</h3>
+                            <div class="members-list">
+                                <div class="member-item">
+                                    <div class="member-avatar">
+                                        <span class="material-icons">account_circle</span>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>John Doe</h4>
+                                        <p>Officer</p>
+                                    </div>
+                                    <div class="member-status">
+                                        <span class="status-indicator online"></span>
+                                    </div>
+                                </div>
+                                <div class="member-item">
+                                    <div class="member-avatar">
+                                        <span class="material-icons">account_circle</span>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Robert Garcia</h4>
+                                        <p>Senior Officer</p>
+                                    </div>
+                                    <div class="member-status">
+                                        <span class="status-indicator away"></span>
+                                    </div>
+                                </div>
+                                <div class="member-item">
+                                    <div class="member-avatar">
+                                        <span class="material-icons">account_circle</span>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Lisa Wong</h4>
+                                        <p>Detective</p>
+                                    </div>
+                                    <div class="member-status">
+                                        <span class="status-indicator online"></span>
+                                    </div>
+                                </div>
+                                <div class="member-item">
+                                    <div class="member-avatar">
+                                        <span class="material-icons">account_circle</span>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>David Kim</h4>
+                                        <p>Technical Support</p>
+                                    </div>
+                                    <div class="member-status">
+                                        <span class="status-indicator online"></span>
+                                    </div>
+                                </div>
+                                <div class="member-item">
+                                    <div class="member-avatar">
+                                        <span class="material-icons">account_circle</span>
+                                    </div>
+                                    <div class="member-info">
+                                        <h4>Maria Rodriguez</h4>
+                                        <p>Officer</p>
+                                    </div>
+                                    <div class="member-status">
+                                        <span class="status-indicator offline"></span>
+                                    </div>
+                                </div>
+                                <div class="view-all-members">
+                                    <button>View all members</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h3>Shared Files</h3>
+                            <div class="shared-files">
+                                <div class="file-item">
+                                    <span class="material-icons">description</span>
+                                    <div class="file-info">
+                                        <h4>Alert_Report_T2458.pdf</h4>
+                                        <p>Shared by Robert Garcia • Today</p>
+                                    </div>
+                                </div>
+                                <div class="file-item">
+                                    <span class="material-icons">videocam</span>
+                                    <div class="file-info">
+                                        <h4>Beach_Cam_4_09AM.mp4</h4>
+                                        <p>Shared by David Kim • Today</p>
+                                    </div>
+                                </div>
+                                <div class="file-item">
+                                    <span class="material-icons">image</span>
+                                    <div class="file-info">
+                                        <h4>Suspect_Photo.jpg</h4>
+                                        <p>Shared by Lisa Wong • Yesterday</p>
+                                    </div>
+                                </div>
+                                <div class="view-all-files">
+                                    <button>View all files</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/communication.js"></script>
+</body>
+</html>

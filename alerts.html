@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Handling - Tourist Mitra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/alerts.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS for maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="anonymous">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Tourist Safety Authority Logo">
+                </div>
+                <h2>Tourist Safety</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="material-icons">dashboard</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="alerts.html">
+                            <span class="material-icons">notifications</span>
+                            <span>Alerts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tourists.html">
+                            <span class="material-icons">people</span>
+                            <span>Tourists</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cases.html">
+                            <span class="material-icons">folder</span>
+                            <span>Cases</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <span class="material-icons">bar_chart</span>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="communication.html">
+                            <span class="material-icons">chat</span>
+                            <span>Communication</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <span class="material-icons">settings</span>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">
+                    <span class="material-icons">logout</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <h1>Alert Handling</h1>
+                </div>
+                
+                <div class="header-right">
+                    <div class="user-info">
+                        <span class="user-role">Police Officer</span>
+                        <span class="user-name">John Doe</span>
+                        <div class="user-avatar">
+                            <img src="images/user-profile.svg" alt="User Profile">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Alert Handling Content -->
+            <div class="alert-handling-content">
+                <!-- Tourist Profile Card -->
+                <section class="tourist-profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Emma Johnson</h2>
+                            <div class="profile-meta">
+                                <span class="profile-meta-item">
+                                    <span class="material-icons">cake</span>
+                                    28 years
+                                </span>
+                                <span class="profile-meta-item">
+                                    <span class="material-icons">flag</span>
+                                    United Kingdom
+                                </span>
+                                <span class="profile-meta-item alert-status active">
+                                    <span class="material-icons">warning</span>
+                                    Active SOS
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-details">
+                        <div class="detail-section">
+                            <h3>Health Information</h3>
+                            <div class="detail-item">
+                                <span class="detail-label">Blood Type:</span>
+                                <span class="detail-value">A+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Allergies:</span>
+                                <span class="detail-value">Penicillin</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Medical Conditions:</span>
+                                <span class="detail-value">Asthma</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>Emergency Contact</h3>
+                            <div class="detail-item">
+                                <span class="detail-label">Name:</span>
+                                <span class="detail-value">Robert Johnson</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Relationship:</span>
+                                <span class="detail-value">Father</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone:</span>
+                                <span class="detail-value">+44 7700 900123</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Location and Actions -->
+                <section class="location-actions-container">
+                    <!-- Location Map -->
+                    <div class="location-map-card">
+                        <div class="card-header">
+                            <h3>
+                                <span class="material-icons">location_on</span>
+                                Last Known Location
+                            </h3>
+                            <span class="location-time">Updated 2 minutes ago</span>
+                        </div>
+                        
+                        <div id="alert-map" class="alert-map"></div>
+                        
+                        <div class="location-details">
+                            <p class="location-address">
+                                <strong>Address:</strong> Central Park, New York, NY 10024, USA
+                            </p>
+                            <p class="location-coordinates">
+                                <strong>Coordinates:</strong> 40.7812° N, 73.9665° W
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="action-buttons-card">
+                        <div class="card-header">
+                            <h3>
+                                <span class="material-icons">touch_app</span>
+                                Actions
+                            </h3>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="action-btn police-btn">
+                                <span class="material-icons">local_police</span>
+                                Assign Nearest Police
+                            </button>
+                            
+                            <button class="action-btn hospital-btn">
+                                <span class="material-icons">local_hospital</span>
+                                Notify Hospital
+                            </button>
+                            
+                            <button class="action-btn call-btn">
+                                <span class="material-icons">call</span>
+                                Call Tourist
+                            </button>
+                            
+                            <button class="action-btn message-btn">
+                                <span class="material-icons">message</span>
+                                Send Message
+                            </button>
+                            
+                            <button class="action-btn resolve-btn">
+                                <span class="material-icons">check_circle</span>
+                                Mark as Resolved
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Chat Panel -->
+                <section class="chat-panel">
+                    <div class="card-header">
+                        <h3>
+                            <span class="material-icons">forum</span>
+                            Coordination Chat
+                        </h3>
+                    </div>
+                    
+                    <div class="chat-messages">
+                        <div class="message-item police">
+                            <div class="message-avatar">
+                                <span class="material-icons">local_police</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <span class="message-sender">Officer Mike</span>
+                                    <span class="message-time">10:32 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    I'm dispatching a unit to Central Park. ETA 5 minutes.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-item hospital">
+                            <div class="message-avatar">
+                                <span class="material-icons">local_hospital</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <span class="message-sender">Dr. Sarah (NY General)</span>
+                                    <span class="message-time">10:33 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    Ambulance dispatched. Please confirm if medical assistance is needed.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-item tourism">
+                            <div class="message-avatar">
+                                <span class="material-icons">tour</span>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <span class="message-sender">Tourism Dept.</span>
+                                    <span class="message-time">10:35 AM</span>
+                                </div>
+                                <div class="message-text">
+                                    We've contacted the UK embassy. They're aware of the situation.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-item system">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Tourist's location updated. Now at Central Park West entrance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message..." class="message-input">
+                        <button class="send-btn">
+                            <span class="material-icons">send</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Leaflet JS for maps -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="anonymous"></script>
+    <script src="js/alerts.js"></script>
+</body>
+</html>

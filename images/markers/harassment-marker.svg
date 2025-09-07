@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Pin Shape -->
+  <path d="M24 4 C 14 4, 6 12, 6 22 C 6 32, 24 44, 24 44 C 24 44, 42 32, 42 22 C 42 12, 34 4, 24 4 Z" fill="#F59E0B" />
+  
+  <!-- Warning Icon -->
+  <path d="M24 14 L 34 32 L 14 32 Z" fill="#FFFFFF" />
+  <circle cx="24" cy="28" r="2" fill="#F59E0B" />
+  <path d="M24 18 L 24 25" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+</svg>

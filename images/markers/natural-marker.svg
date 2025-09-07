@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Pin Shape -->
+  <path d="M24 4 C 14 4, 6 12, 6 22 C 6 32, 24 44, 24 44 C 24 44, 42 32, 42 22 C 42 12, 34 4, 24 4 Z" fill="#8B5CF6" />
+  
+  <!-- Natural Disaster Icon (Waves) -->
+  <path d="M14 18 C 18 14, 22 22, 26 18 C 30 14, 34 22, 38 18 L 38 24 C 34 28, 30 20, 26 24 C 22 28, 18 20, 14 24 Z" fill="#FFFFFF" />
+  <path d="M14 26 C 18 22, 22 30, 26 26 C 30 22, 34 30, 38 26 L 38 32 C 34 36, 30 28, 26 32 C 22 36, 18 28, 14 32 Z" fill="#FFFFFF" />
+</svg>
